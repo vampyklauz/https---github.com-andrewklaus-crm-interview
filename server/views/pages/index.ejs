@@ -1,0 +1,158 @@
+<!doctype html>
+<html class="no-js css-menubar" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <base href="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Synergy360 CRM Interview</title>
+
+    <!-- build:css /minified/min_style1.css -->
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-extend.min.css">
+        <link rel="stylesheet" href="/assets/bootstrap/css/site.css">
+    <!-- endbuild -->
+
+    <!-- build:css /minified/min_style2.css -->
+        <!-- Plugins -->
+        <link rel="stylesheet" href="/assets/bootstrap/skins/purple.css">
+        <link rel="stylesheet" href="/assets/bootstrap/vendor/animsition/animsition.css">
+        <link rel="stylesheet" href="/assets/bootstrap/vendor/asscrollable/asScrollable.css">
+        <link rel="stylesheet" href="/assets/bootstrap/vendor/bootstrap-select/bootstrap-select.css">
+        <link rel="stylesheet" href="/assets/bootstrap/vendor/slidepanel/slidePanel.css">
+        <link rel="stylesheet" href="/assets/bootstrap/vendor/jquery-mmenu/jquery-mmenu.css">
+        <link rel="stylesheet" href="/assets/bootstrap/vendor/waves/waves.css">
+    <!-- endbuild -->
+
+    <!--Extras-->
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2017.1.118/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2017.1.118/styles/kendo.material.min.css" />
+
+    <!-- build:css /minified/min_custom.css -->
+        <!--Customizations-->
+        <link rel="stylesheet" href="/assets/styles/our-kendo-custom.css">
+        <link rel="stylesheet" href="/assets/styles/custom.css">
+        <link rel="stylesheet" href="/assets/styles/animate.css">
+    <!-- endbuild -->
+
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="/assets/bootstrap/fonts/material-design/material-design.min.css">
+    <link rel="stylesheet" href="/assets/bootstrap/fonts/glyphicons/glyphicons.min.css">
+    <link rel="stylesheet" href="/assets/bootstrap/fonts/glyphicons-pro/css/glyphicons.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+
+
+    <!--[if lt IE 9]>
+    <script src="/assets/bootstrap/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+    <script src="/assets/bootstrap/vendor/media-match/media.match.min.js"></script>
+    <script src="/assets/bootstrap/vendor/respond/respond.min.js"></script>
+    <![endif]-->
+    <!-- Scripts -->
+    <script src="/assets/bootstrap/vendor/breakpoints/breakpoints.js"></script>
+    <script>
+        Breakpoints();
+    </script>
+</head>
+
+<!-- --- BODY --- -->
+
+<body ng-app="synergy360-crm-app" class="site-navbar-small page-aside-fixed page-aside-right mm-wrapper site-menubar-fold">
+
+    <% include ../partials/header.html %>
+    <% include ../partials/navigation.html %>
+
+    <!-- Add your site or application content here -->
+    <div ui-view="" class="root page animsition" style="animation-duration: 800ms; opacity: 1;min-height:100%;">
+    </div>
+
+</body>
+
+<!-- build:js /minified/min_core.js -->
+    <!-- Core  -->
+    <script src="/assets/bootstrap/vendor/jquery/jquery.js"></script>
+    <script src="/assets/bootstrap/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="/assets/bootstrap/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+    <script src="/assets/bootstrap/vendor/tether/tether.js"></script>
+    <script src="/assets/bootstrap/vendor/bootstrap/bootstrap.js"></script>
+    <script src="/assets/bootstrap/vendor/animsition/animsition.js"></script>
+    <script src="/assets/bootstrap/vendor/mousewheel/jquery.mousewheel.js"></script>
+    <script src="/assets/bootstrap/vendor/asscrollbar/jquery-asScrollbar.js"></script>
+    <script src="/assets/bootstrap/vendor/asscrollable/jquery-asScrollable.js"></script>
+    <script src="/assets/bootstrap/vendor/waves/waves.js"></script>
+
+    <!-- Remark Scripts -->
+    <script src="/assets/bootstrap/js/State.js"></script>
+    <script src="/assets/bootstrap/js/Component.js"></script>
+    <script src="/assets/bootstrap/js/Plugin.js"></script>
+    <script src="/assets/bootstrap/js/Base.js"></script>
+    <script src="/assets/bootstrap/js/Config.js"></script>
+    <script src="/assets/bootstrap/js/Section/Menubar.js"></script>
+    <script src="/assets/bootstrap/js/Section/Sidebar.js"></script>
+    <script src="/assets/bootstrap/js/config/colors.js"></script>
+
+    <!-- Page -->
+    <script src="/assets/bootstrap/js/Site.js"></script>
+    <script src="/assets/bootstrap/js/Plugin/asscrollable.js"></script>
+    <script src="/assets/bootstrap/js/Plugin/slidepanel.js"></script>
+    <script src="/assets/bootstrap/js/Plugin/matchheight.js"></script>
+
+    <!-- Plugins -->
+    <script src="/assets/bootstrap/vendor/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="/assets/bootstrap/vendor/jquery-mmenu/jquery.mmenu.min.all.js"></script>
+    <script src="/assets/bootstrap/vendor/screenfull/screenfull.js"></script>
+    <script src="/assets/bootstrap/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="/assets/bootstrap/vendor/matchheight/jquery.matchHeight-min.js"></script>
+
+<!-- endbuild -->
+
+<!-- Initialization script -->
+<script>
+    Config.set('assets', '/assets');
+    Site.run();
+    $(document).ready(function() {
+        Waves.attach('.page-content .btn-floating', ['waves-light']);
+    });
+</script>
+
+<!-- build:js /minified/min_bower.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/bower_components/lodash/lodash.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/moment-timezone/builds/moment-timezone-with-data-2012-2022.js"></script>
+    <script src="/bower_components/underscore/underscore.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="/bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+    <!-- endbower -->
+<!-- endbuild -->
+
+<script src="app/app.js"></script>
+
+<!-- build:js /minified/min_common.js -->
+    <!-- injector:js -->
+    <script src="app/common/directives/company-edit-inline/company-edit-inline.directive.js"></script>
+    <script src="app/common/directives/contacts-grid-inline/contacts-grid-inline.directive.js"></script>
+    <script src="app/common/directives/kendo-grid-row-dbl-click/kendo-grid-row-dbl-click.directive.js"></script>
+    <script src="app/common/directives/state-select2/state-select2.directive.js"></script>
+    <script src="app/common/layout/header/header.controller.js"></script>
+    <script src="app/common/layout/navigation/navigation.controller.js"></script>
+    <script src="app/common/modals/confirm-popup/confirm-popup.controller.js"></script>
+    <script src="app/common/modals/confirm-popup/confirm-popup.modal.js"></script>
+    <script src="app/config/global.settings.js"></script>
+    <script src="app/components/companies/companies.routes.js"></script>
+    <script src="app/components/home/home.routes.js"></script>
+    <!-- endinjector -->
+<!-- endbuild -->
+
+<script src="//kendo.cdn.telerik.com/2017.1.118/js/kendo.all.min.js"></script>
+
+</html>

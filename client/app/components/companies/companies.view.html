@@ -1,0 +1,29 @@
+<div class="page-main ">
+    <div class="page-header ">
+        <h1 class="page-title ">Companies</h1>
+        <ol class="breadcrumb ">
+            <li class="breadcrumb-item "><a href="#/ ">Home</a></li>
+            <li class="breadcrumb-item active ">Companies</li>
+        </ol>
+    </div>
+    <div class="page-content container-fluid ">
+        <div class="panel">
+            <header class="panel-heading ">
+                <div class="panel-actions "></div>
+                <div class="c-panel-title " style="padding-bottom:20px;">Companies
+                </div>
+
+            </header>
+            <div class="panel-body ">
+                <div class="col-md-12">
+                    <div style="padding-bottom:25px" class="row">
+                        <div class="s-grid-tool-bar">
+                            <button type="button" style="border: none;" ng-click="editClick(null)" class="btn btn-primary pull-right s-btn-grid-add"><i class="icon s-btn-grid-action glyphicon glyphicon-plus" aria-hidden="true"></i>Add New</button>
+                        </div>
+                        <div id="grid" kendo-grid="grid" options="gridOptions" kendo-grid-row-dbl-click="editClick(dataItem)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

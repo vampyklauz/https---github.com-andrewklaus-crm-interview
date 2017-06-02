@@ -1,0 +1,73 @@
+<form id="CompanyForm" style="height:100%;margin-top:0px;" name="vm.form" ng-submit="vm.next()" novalidate>
+    <div class="row">
+        <div class="col-lg-12" ng-show="vm.form.$invalid && vm.form.$submitted">
+            <div class=" alert alert-danger">
+                You must fix errors before continuing!
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top:20px;">
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label>Name*:</label>
+                <input type="text" ng-model="vm.data.name" name="name" class="form-control" required>
+                <div class="help-block" ng-messages="vm.form.name.$error" ng-if="vm.form.name.$dirty || vm.form.$submitted">
+                    <p ng-message="required">Required</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label>City:</label>
+                <input type="text" ng-model="vm.data.city" name="city" class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label>State*:</label>
+                <state-select2 id="state" name="state" model="vm.data.stateCode" required="true"></state-select2>
+                <!--                            <input type="text" ng-model="dataItem.stateCode" name="state" class="form-control">-->
+                <div class="help-block" ng-messages="vm.form.state.$error" ng-if="vm.form.state.$dirty || vm.form.$submitted">
+                    <p ng-message="required">Required</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--row 2 -->
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label>Status*:</label>
+                <select class="form-control" ng-model="vm.data.statusCode" name="statusCode" required>
+                    <option value="">---Please select---</option>
+                    <option ng-repeat="item in vm.companyStatuses" value="{{item.code}}">{{item.name}}</option>
+                </select>
+                <div class="help-block" ng-messages="vm.form.statusCode.$error" ng-if="vm.form.statusCode.$dirty || vm.form.$submitted">
+                    <p ng-message="required">Required</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label>Status Reason:</label>
+                <input type="text" ng-model="vm.data.statusReasonCode" class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label>URL:</label>
+                <input type="text" ng-model="vm.data.url" class="form-control">
+            </div>
+        </div>
+    </div>
+    <!--row 3 -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label>LinkedIn URL:</label>
+                <input type="text" ng-model="vm.data.linkedinUrl" class="form-control">
+            </div>
+        </div>
+    </div>
+</form>

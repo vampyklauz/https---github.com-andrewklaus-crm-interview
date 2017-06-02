@@ -1,0 +1,8 @@
+<div class="panel-body " style="padding:0px;">
+    <div style="padding-bottom:25px" class="row">
+        <div class="s-grid-tool-bar">
+            <button type="button" style="border: none;" ng-click="vm.addClick()" class="btn btn-primary pull-right s-btn-grid-add"><i class="icon s-btn-grid-action glyphicon glyphicon-plus" aria-hidden="true"></i>Add New</button>
+        </div>
+        <div id="grid" kendo-grid="vm.grid" options="vm.gridOptions" kendo-grid-row-dbl-click="vm.editClick(dataItem)"></div>
+    </div>
+</div>
